@@ -3,6 +3,8 @@ let paragrafos = document.querySelectorAll("p");
 let botao = document.querySelector("button");
 let sonic = document.querySelector("#sonic");
 
+let somCorrida = new Audio('corrida.mp3');
+
 botao.onclick = pintarAzul;
 sonic.onclick = correr;
 
@@ -20,6 +22,12 @@ function pintarAzul(){
 
 function correr(){
     sonic.style.transform = "translateX(1000px) scale(0.1)";
+    
+    somCorrida.play();
+
+    setInterval(function(){
+        somCorrida.play();
+    }, 1000);
 }
 
 
